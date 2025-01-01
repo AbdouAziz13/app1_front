@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs 'node-23.5.0' 
+        nodejs 'node-23.5.0'
     }
 
     environment {
@@ -14,7 +14,8 @@ pipeline {
             steps {
                 echo 'Setting up the environment...'
                 sh 'node -v'
-                sh 'npm -v'  
+                sh 'npm -v'
+            }
         }
 
         stage('Install Dependencies') {
@@ -34,8 +35,6 @@ pipeline {
                 }
             }
         }
-
-      
 
         stage('Deploy') {
             steps {
