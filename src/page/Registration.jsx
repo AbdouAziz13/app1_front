@@ -11,7 +11,7 @@ const Login = () => {
   //form sumit
   const handleSubmit = (e) => {
     e.preventDefault(); 
-    axios.post("http://localhost:8080/api/new", { username, password })
+    axios.post("http://localhost:1000/api/new", { username, password })
       .then(() => {
         console.log("Données envoyées avec succès !");
       })
